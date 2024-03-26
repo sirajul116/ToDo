@@ -1,8 +1,9 @@
 import React from 'react';
-import { Container, Typography, Button, Grid } from '@mui/material';
+import { Container, Typography } from '@mui/material';
 import { useSelector, useDispatch } from 'react-redux';
 import { addTodo, deleteTodo } from './redux/todosSlice';
 import TodoForm from './components/TodoForm';
+import TodoList from './components/TodoList';
 
 function App() {
   const todos = useSelector((state) => state.todos);
@@ -17,10 +18,16 @@ function App() {
   };
   return (
     <Container maxwidth="lg">
-      <Typography variant="h3" align="center" gutterBottom>
+      <Typography
+        variant="h3"
+        align="center"
+        gutterBottom={true}
+        sx={{ textDecoration: 'underline' }}
+      >
         ToDo
       </Typography>
       <TodoForm onSaveTodo={handleAddTodo} />
+      <TodoList todos={todos} onDeleteTodo={handleDeleteTodo} />
     </Container>
   );
 }
