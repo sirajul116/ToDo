@@ -6,7 +6,7 @@ const TodoList = ({ todos, onDeleteTodo }) => {
   return (
     <Grid container spacing={2}>
       {todos.map((todo) => (
-        <Grid item key={todo.id} xs>
+        <Grid item key={todo.id} xs={12}>
           <TodoCard todo={todo} onDeleteTodo={onDeleteTodo} />
         </Grid>
       ))}

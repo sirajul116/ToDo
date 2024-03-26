@@ -53,6 +53,7 @@ const TodoForm = ({ onSaveTodo }) => {
       <Dialog
         open={open}
         onClose={handleClose}
+        fullWidth
         aria-labelledby="form-dialog-title"
       >
         <DialogTitle id="form-dialog-title">New ToDo</DialogTitle>
@@ -62,7 +63,7 @@ const TodoForm = ({ onSaveTodo }) => {
             id="description"
             label="Description"
             type="text"
-            fullwidth
+            fullWidth
             multiline
             rows={3}
             value={todo.description}
