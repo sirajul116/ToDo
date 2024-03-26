@@ -6,6 +6,7 @@ import {
   DialogActions,
   DialogContent,
   DialogTitle,
+  Typography,
 } from '@mui/material';
 
 const TodoForm = ({ onSaveTodo }) => {
@@ -32,23 +33,25 @@ const TodoForm = ({ onSaveTodo }) => {
 
   return (
     <div>
-      <Button
-        bariant="outlined"
-        color="secondary"
-        size="large"
-        onClick={handleClickOpen}
-        style={{ marginBottom: '2rem' }}
-        sx={{
-          bgcolor: 'background.paper',
-          border: 1,
-          boxShadow: 1,
-          borderRadius: 2,
-          p: 2,
-          minWidth: 300,
-        }}
-      >
-        Add ToDo
-      </Button>
+      <Typography align="center">
+        <Button
+          bariant="outlined"
+          color="secondary"
+          size="large"
+          onClick={handleClickOpen}
+          style={{ marginBottom: '2rem' }}
+          sx={{
+            bgcolor: 'background.paper',
+            border: 1,
+            boxShadow: 1,
+            borderRadius: 2,
+            p: 2,
+            minWidth: 300,
+          }}
+        >
+          Add ToDo
+        </Button>
+      </Typography>
 
       <Dialog
         open={open}
