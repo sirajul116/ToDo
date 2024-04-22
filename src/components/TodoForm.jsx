@@ -68,7 +68,7 @@ const TodoForm = ({ onSaveTodo }) => {
             type="text"
             fullWidth
             multiline
-            rows={3}
+            rows={5}
             value={todo.description}
             onChange={(e) => setTodo({ ...todo, description: e.target.value })}
           />
